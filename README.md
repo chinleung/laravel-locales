@@ -17,7 +17,7 @@ composer require chinleung/laravel-locales
 
 ## Configuration
 
-By default, the application locales are going to be `en` and `fr`. If your application support other locales, you can either set a `app.locales` in your `config/app.php` or publish the configuration file:
+By default, the application locales is only going to be `en`. If your application support other locales, you can either set a `app.locales` in your `config/app.php` or publish the configuration file:
 
 ``` bash
 php artisan vendor:publish --provider="Chinleung\LaravelMultilingualRoutes\LaravelLocalesServiceProvider" --tag="config"
@@ -25,13 +25,25 @@ php artisan vendor:publish --provider="Chinleung\LaravelMultilingualRoutes\Larav
 
 ## Helpers
 
+### locale() : string
+
+> Update or retrieve the current locale of the application.
+> Alias of `app()->getLocale();`.
+
+```php
+locale(string $locale = null); // 'en'
+
+locale('fr'); // 'fr'
+locale(); // 'fr'
+```
+
 ### locales() : array
 
 > Retrieve the supported locales of the application.  
 > Has priority for `app.locales` over `laravel-locales.supported`.
 
 ``` php
-locales(); // ['en', 'fr']
+locales(); // ['en']
 
 config(['laravel-locales.supported' => ['en', 'fr', 'zh']]);
 locales(); // ['en', 'fr', 'zh']

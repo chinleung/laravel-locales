@@ -6,6 +6,6 @@ return [
      * This can be overwritten by setting a 'app.locales'.
      */
     'supported' => [
-        'en', 'fr',
+        'en',
     ],
 ];

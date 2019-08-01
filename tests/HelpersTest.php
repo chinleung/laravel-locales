@@ -15,7 +15,8 @@ class HelpersTest extends TestCase
      */
     public function the_locales_helper_will_return_all_locales() : void
     {
-        $this->assertCount(2, locales());
+        $this->assertCount(1, locales());
+        $this->assertEquals(['en'], locales());
     }
 
     /**
@@ -27,8 +28,8 @@ class HelpersTest extends TestCase
      */
     public function the_locales_helper_will_return_locales_from_app_first() : void
     {
-        config(['app.locales' => ['en']]);
-        $this->assertCount(1, locales());
+        config(['app.locales' => ['en', 'fr']]);
+        $this->assertCount(2, locales());
 
         config(['app.locales' => ['en', 'fr', 'zh']]);
         $this->assertCount(3, locales());
@@ -46,6 +47,36 @@ class HelpersTest extends TestCase
 
         app()->setLocale('fr');
         $this->assertEquals('fr', locale());
+    }
+
+    /**
+     * The locale helper can update the application's locale.
+     *
+     * @test
+     * @return void
+     */
+    public function the_locale_helper_can_update_the_application_locale() : void
+    {
+        $this->assertEquals('en', locale());
+
+        config(['laravel-locales.supported' => ['en', 'fr']]);
+
+        $this->assertEquals('fr', locale('fr'));
+        $this->assertEquals('fr', locale());
+    }
+
+    /**
+     * The locale helper will not update the application's locale if it's not
+     * in the list of supported locales.
+     *
+     * @test
+     * @return void
+     */
+    public function the_locale_helper_will_not_update_if_locale_is_not_supported() : void
+    {
+        $this->assertEquals('en', locale());
+        $this->assertEquals('en', locale('fr'));
+        $this->assertEquals('en', locale());
     }
 
     /**
