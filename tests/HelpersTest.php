@@ -28,8 +28,24 @@ class HelpersTest extends TestCase
     public function the_locales_helper_will_return_locales_from_app_first() : void
     {
         config(['app.locales' => ['en']]);
-
         $this->assertCount(1, locales());
+
+        config(['app.locales' => ['en', 'fr', 'zh']]);
+        $this->assertCount(3, locales());
+    }
+
+    /**
+     * The locale helper will retrieve the current locale of the application.
+     *
+     * @test
+     * @return void
+     */
+    public function the_locale_helper_will_return_the_current_active_locale() : void
+    {
+        $this->assertEquals(app()->getLocale(), locale());
+
+        app()->setLocale('fr');
+        $this->assertEquals('fr', locale());
     }
 
     /**

@@ -11,3 +11,15 @@ if (! function_exists('locales')) {
         return config('app.locales') ?? config('laravel-locales.supported');
     }
 }
+
+if (! function_exists('locale')) {
+    /**
+     * Retrieve the current locale of the application.
+     *
+     * @return string
+     */
+    function locale() : string
+    {
+        return app()->getLocale();
+    }
+}
