@@ -21,7 +21,7 @@ if (! function_exists('locale')) {
      */
     function locale(string $locale = null) : string
     {
-        if ($locale && in_array($locale, locales())) {
+        if (! is_null($locale) && in_array($locale, locales())) {
             app()->setLocale($locale);
         }
 
