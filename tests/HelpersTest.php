@@ -1,6 +1,6 @@
 <?php
 
-namespace Chinleung\LaravelLocales\Tests;
+namespace ChinLeung\LaravelLocales\Tests;
 
 use ChinLeung\LaravelLocales\LaravelLocalesServiceProvider;
 use Orchestra\Testbench\TestCase;

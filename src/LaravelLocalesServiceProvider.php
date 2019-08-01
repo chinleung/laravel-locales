@@ -1,6 +1,6 @@
 <?php
 
-namespace Chinleung\LaravelLocales;
+namespace ChinLeung\LaravelLocales;
 
 use Illuminate\Support\ServiceProvider;
 
