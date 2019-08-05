@@ -2,7 +2,7 @@
 
 All notable changes to `laravel-locales` will be documented in this file.
 
-## [v1.0.2 - 2019-08-05](https://github.com/chinleung/laravel-locales/compare/v1.0.2...v1.0.3)
+## [v1.0.3 - 2019-08-05](https://github.com/chinleung/laravel-locales/compare/v1.0.2...v1.0.3)
 
 - Changed the config file from `laravel-locales.php` to `locales.php`
 - Fixed the publish config command in the `README.md`
