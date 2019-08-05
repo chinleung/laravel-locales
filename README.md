@@ -45,7 +45,7 @@ locale(); // 'fr'
 ``` php
 locales(); // ['en']
 
-config(['laravel-locales.supported' => ['en', 'fr', 'zh']]);
+config(['locales.supported' => ['en', 'fr', 'zh']]);
 locales(); // ['en', 'fr', 'zh']
 
 config('app.locales' => ['en', 'zh']);
