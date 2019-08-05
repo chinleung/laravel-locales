@@ -2,11 +2,20 @@
 
 All notable changes to `laravel-locales` will be documented in this file.
 
-## 1.0.1 - 2019-08-01
+## [v1.0.2 - 2019-08-05](https://github.com/chinleung/laravel-locales/compare/v1.0.2...v1.0.3)
+
+- Changed the config file from `laravel-locales.php` to `locales.php`
+- Fixed the publish config command in the `README.md`
+
+## [v1.0.2 - 2019-08-01](https://github.com/chinleung/laravel-locales/compare/v1.0.1...v1.0.2)
+
+- Fixed the namespace of classes.
+
+## [v1.0.1 - 2019-08-01](https://github.com/chinleung/laravel-locales/compare/v1.0.0...v1.0.1)
 
 - Changed the default supported locales to `['en']` only
 - Added [locale](https://github.com/chinleung/laravel-locales#locale--string) helper
 
-## 1.0.0 - 2019-07-29
+## [v1.0.0 - 2019-07-29]
 
 - Initial release
