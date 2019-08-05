@@ -8,7 +8,7 @@ if (! function_exists('locales')) {
      */
     function locales() : array
     {
-        return config('app.locales') ?? config('laravel-locales.supported');
+        return config('app.locales') ?? config('locales.supported');
     }
 }
 

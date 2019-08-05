@@ -25,6 +25,6 @@ class LaravelLocalesServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'laravel-locales');
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'locales');
     }
 }

@@ -59,7 +59,7 @@ class HelpersTest extends TestCase
     {
         $this->assertEquals('en', locale());
 
-        config(['laravel-locales.supported' => ['en', 'fr']]);
+        config(['locales.supported' => ['en', 'fr']]);
 
         $this->assertEquals('fr', locale('fr'));
         $this->assertEquals('fr', locale());
