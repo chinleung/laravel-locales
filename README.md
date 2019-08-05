@@ -20,7 +20,7 @@ composer require chinleung/laravel-locales
 By default, the application locales is only going to be `en`. If your application support other locales, you can either set a `app.locales` in your `config/app.php` or publish the configuration file:
 
 ``` bash
-php artisan vendor:publish --provider="ChinLeung\LaravelMultilingualRoutes\LaravelLocalesServiceProvider" --tag="config"
+php artisan vendor:publish --provider="ChinLeung\LaravelLocales\LaravelLocalesServiceProvider" --tag="config"
 ```
 
 ## Helpers
