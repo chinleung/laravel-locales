@@ -80,6 +80,21 @@ class HelpersTest extends TestCase
     }
 
     /**
+     * The locales helper can set the list of supported locales.
+     *
+     * @test
+     * @return void
+     */
+    public function the_locales_helper_can_update_the_list_of_supported_locales() : void
+    {
+        $this->assertCount(1, locales());
+
+        locales($supported = ['en', 'fr']);
+
+        $this->assertEquals($supported, locales());
+    }
+
+    /**
      * Retrieve the package providers of the application.
      *
      * @param  \Illuminate\Foundation\Application  $app

@@ -4,10 +4,18 @@ if (! function_exists('locales')) {
     /**
      * Retrieve the supported locales of the application.
      *
+     * @param  array  $locales
      * @return array
      */
-    function locales() : array
+    function locales(array $locales = null) : array
     {
+        if (! is_null($locales)) {
+            config([
+                'app.locales' => $locales,
+                'locales.supported' => $locales,
+            ]);
+        }
+
         return config('app.locales') ?? config('locales.supported');
     }
 }
