@@ -16,7 +16,9 @@ if (! function_exists('locales')) {
             ]);
         }
 
-        return config('app.locales') ?? config('locales.supported');
+        $locales = config('app.locales') ?? config('locales.supported');
+
+        return isset($locales[0]) ? $locales : array_keys($locales);
     }
 }
 
