@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-locales` will be documented in this file.
 
+## [v1.0.5 - 2019-09-03](https://github.com/chinleung/laravel-locales/compare/v1.0.4...v1.0.5)
+
+- Allow associative arrays for locales configuration ([#2](https://github.com/chinleung/laravel-locales/issues/2))
+
 ## [v1.0.4 - 2019-08-06](https://github.com/chinleung/laravel-locales/compare/v1.0.3...v1.0.4)
 
 - Allow `locales` to set the supported locales
