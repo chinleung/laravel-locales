@@ -27,19 +27,20 @@ php artisan vendor:publish --provider="ChinLeung\LaravelLocales\LaravelLocalesSe
 
 ### locale(string $locale = null) : string
 
-> Update or retrieve the current locale of the application.
-> Alias of `app()->getLocale();`.
+> Retrieve or update the current locale of the application.
 
 ```php
+// Alias of app()->getLocale();
 locale(); // 'en'
 
+// Alias of app()->setLocale('fr');
 locale('fr'); // 'fr'
 locale(); // 'fr'
 ```
 
 ### locales(array $locales = null) : array
 
-> Retrieve the supported locales of the application.  
+> Retrieve or update the supported locales of the application.  
 > Has priority for `app.locales` over `laravel-locales.supported`.
 
 ``` php
