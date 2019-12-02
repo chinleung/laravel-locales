@@ -13,15 +13,4 @@ return [
     'supported' => [
         'en',
     ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Default Locale Configuration
-    |--------------------------------------------------------------------------
-    |
-    | The default locale of the application.
-    |
-    */
-
-    'default' => config('app.fallback_locale', 'en'),
 ];
