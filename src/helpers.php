@@ -7,7 +7,7 @@ if (! function_exists('locales')) {
      * @param  array  $locales
      * @return array
      */
-    function locales(array $locales = null) : array
+    function locales(array $locales = null): array
     {
         if (! is_null($locales)) {
             config([
@@ -29,7 +29,7 @@ if (! function_exists('locale')) {
      * @param  string  $locale
      * @return string
      */
-    function locale(string $locale = null) : string
+    function locale(string $locale = null): string
     {
         if (! is_null($locale) && in_array($locale, locales())) {
             app()->setLocale($locale);

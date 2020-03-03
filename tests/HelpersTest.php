@@ -13,7 +13,7 @@ class HelpersTest extends TestCase
      * @test
      * @return void
      */
-    public function the_locales_helper_will_return_all_locales() : void
+    public function the_locales_helper_will_return_all_locales(): void
     {
         $this->assertCount(1, locales());
         $this->assertEquals(['en'], locales());
@@ -26,7 +26,7 @@ class HelpersTest extends TestCase
      * @test
      * @return void
      */
-    public function the_locales_helper_will_return_locales_from_app_first() : void
+    public function the_locales_helper_will_return_locales_from_app_first(): void
     {
         config(['app.locales' => ['en', 'fr']]);
         $this->assertCount(2, locales());
@@ -41,7 +41,7 @@ class HelpersTest extends TestCase
      * @test
      * @return void
      */
-    public function the_locale_helper_will_return_the_current_active_locale() : void
+    public function the_locale_helper_will_return_the_current_active_locale(): void
     {
         $this->assertEquals(app()->getLocale(), locale());
 
@@ -55,7 +55,7 @@ class HelpersTest extends TestCase
      * @test
      * @return void
      */
-    public function the_locale_helper_can_update_the_application_locale() : void
+    public function the_locale_helper_can_update_the_application_locale(): void
     {
         $this->assertEquals('en', locale());
 
@@ -72,7 +72,7 @@ class HelpersTest extends TestCase
      * @test
      * @return void
      */
-    public function the_locale_helper_will_not_update_if_locale_is_not_supported() : void
+    public function the_locale_helper_will_not_update_if_locale_is_not_supported(): void
     {
         $this->assertEquals('en', locale());
         $this->assertEquals('en', locale('fr'));
@@ -85,7 +85,7 @@ class HelpersTest extends TestCase
      * @test
      * @return void
      */
-    public function the_locales_helper_can_update_the_list_of_supported_locales() : void
+    public function the_locales_helper_can_update_the_list_of_supported_locales(): void
     {
         $this->assertCount(1, locales());
 
@@ -100,7 +100,7 @@ class HelpersTest extends TestCase
      * @param  \Illuminate\Foundation\Application  $app
      * @return array
      */
-    protected function getPackageProviders($app) : array
+    protected function getPackageProviders($app): array
     {
         return [
             LaravelLocalesServiceProvider::class,
