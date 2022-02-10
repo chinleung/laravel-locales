@@ -1,7 +1,7 @@
 # Laravel Locales
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/chinleung/laravel-locales.svg?style=flat-square)](https://packagist.org/packages/chinleung/laravel-locales)
-[![Build Status](https://img.shields.io/travis/chinleung/laravel-locales/master.svg?style=flat-square)](https://travis-ci.org/chinleung/laravel-locales)
+[![Build Status](https://github.com/chinleung/laravel-locales/workflows/tests/badge.svg?branch=v2)](https://github.com/chinleung/laravel-locales/actions?query=workflow%3Atests)
 [![Quality Score](https://img.shields.io/scrutinizer/g/chinleung/laravel-locales.svg?style=flat-square)](https://scrutinizer-ci.com/g/chinleung/laravel-locales)
 [![Total Downloads](https://img.shields.io/packagist/dt/chinleung/laravel-locales.svg?style=flat-square)](https://packagist.org/packages/chinleung/laravel-locales)
 
