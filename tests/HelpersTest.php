@@ -11,6 +11,7 @@ class HelpersTest extends TestCase
      * The locales helper will return the list of locales.
      *
      * @test
+     *
      * @return void
      */
     public function the_locales_helper_will_return_all_locales(): void
@@ -24,6 +25,7 @@ class HelpersTest extends TestCase
      * priority.
      *
      * @test
+     *
      * @return void
      */
     public function the_locales_helper_will_return_locales_from_app_first(): void
@@ -39,6 +41,7 @@ class HelpersTest extends TestCase
      * The locale helper will retrieve the current locale of the application.
      *
      * @test
+     *
      * @return void
      */
     public function the_locale_helper_will_return_the_current_active_locale(): void
@@ -53,6 +56,7 @@ class HelpersTest extends TestCase
      * The locale helper can update the application's locale.
      *
      * @test
+     *
      * @return void
      */
     public function the_locale_helper_can_update_the_application_locale(): void
@@ -70,6 +74,7 @@ class HelpersTest extends TestCase
      * in the list of supported locales.
      *
      * @test
+     *
      * @return void
      */
     public function the_locale_helper_will_not_update_if_locale_is_not_supported(): void
@@ -83,6 +88,7 @@ class HelpersTest extends TestCase
      * The locales helper can set the list of supported locales.
      *
      * @test
+     *
      * @return void
      */
     public function the_locales_helper_can_update_the_list_of_supported_locales(): void
