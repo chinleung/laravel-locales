@@ -13,8 +13,6 @@ class LaravelLocalesServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        App::mixin(new AppMacros);
-
         require __DIR__.'/helpers.php';
 
         if ($this->app->runningInConsole()) {

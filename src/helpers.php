@@ -11,7 +11,16 @@ if (! function_exists('locales')) {
      */
     function locales(?array $locales = null): array
     {
-        return App::getLocales($locales);
+        if (! is_null($locales)) {
+            config([
+                'app.locales' => $locales,
+                'locales.supported' => $locales,
+            ]);
+        }
+
+        $locales = config('app.locales') ?? config('locales.supported');
+
+        return isset($locales[0]) ? $locales : array_keys($locales);
     }
 }
 
