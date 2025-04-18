@@ -2,8 +2,6 @@
 
 namespace ChinLeung\LaravelLocales;
 
-use ChinLeung\LaravelLocales\Macros\AppMacros;
-use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelLocalesServiceProvider extends ServiceProvider

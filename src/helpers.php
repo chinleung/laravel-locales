@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\App;
-
 if (! function_exists('locales')) {
     /**
      * Retrieve the supported locales of the application.
