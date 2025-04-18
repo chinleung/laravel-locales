@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\App;
+
 if (! function_exists('locales')) {
     /**
      * Retrieve the supported locales of the application.
@@ -9,16 +11,7 @@ if (! function_exists('locales')) {
      */
     function locales(array $locales = null): array
     {
-        if (! is_null($locales)) {
-            config([
-                'app.locales' => $locales,
-                'locales.supported' => $locales,
-            ]);
-        }
-
-        $locales = config('app.locales') ?? config('locales.supported');
-
-        return isset($locales[0]) ? $locales : array_keys($locales);
+        return App::getLocales($locales);
     }
 }
 
