@@ -1,15 +1,19 @@
 name: tests
-on: [push, pull_request]
+
+on:
+  - push
+  - pull_request
 
 jobs:
   tests:
     name: PHP ${{ matrix.php }} - ${{ matrix.stability }}
+
     runs-on: ubuntu-latest
 
     strategy:
       fail-fast: true
       matrix:
-        php: ['8.0', '8.1', '8.2']
+        php: ['8.0', '8.1', '8.2', '8.3', '8.4', '8.5']
         stability: [prefer-lowest, prefer-stable]
 
     steps:
