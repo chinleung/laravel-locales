@@ -7,6 +7,14 @@
 
 Add configurations and helpers to make an application support multiple locales.
 
+## Versions
+
+| Package | Laravel  | PHP   |
+|---------|----------|-------|
+| 3.x     | 13.x     | ^8.3  |
+| 2.x     | 9.x–12.x | ^8.0  |
+| 1.x     | 6.x–8.x  | ^7.4  |
+
 ## Installation
 
 You can install the package via composer:
